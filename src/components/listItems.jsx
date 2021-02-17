@@ -17,14 +17,39 @@ export const mainListItems = (
       <ListItemText primary="Dashboard" />
     </ListItem>
     </Link>
-    <Link to='AddNewUser'>
+    <Link to='/AddNewUser'>
     <ListItem button>
       <ListItemIcon>
-        <GroupAddRoundedIcon />
+        <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Add New User" />
     </ListItem>
     </Link>
+    <Link to='/AddServer'>
+    <ListItem button>
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="Add New Server" />
+    </ListItem>
+    </Link>
+    <Link to='/SignIn'>
+    <ListItem button>
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="Sign in" />
+    </ListItem>
+    </Link>
+    <Link to='/Signup'>
+    <ListItem button>
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="Sign up" />
+    </ListItem>
+    </Link>
+   
     <List>
       <ListItem>
         <ListItemText primary='Option'></ListItemText>

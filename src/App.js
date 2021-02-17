@@ -4,6 +4,7 @@ import Signup from './components/Signup';
 import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AddNewUser from './components/AddNewUser';
+import AddServer from './components/AddServer';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path='/AddNewUser'>
             <AddNewUser />
+          </Route>
+          <Route path='/AddServer'>
+            <AddServer />
           </Route>
         </Switch>
         <Route path='/ok'>

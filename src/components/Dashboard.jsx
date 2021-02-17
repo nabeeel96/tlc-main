@@ -19,10 +19,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems } from './listItems';
-// import Chart from './Chart';
-import Deposits from './Deposit';
-import Orders from './Order';
-import AddUser from './AddNewUser';
+import AddNewUser from './AddNewUser'
 
 function Copyright() {
   return (
@@ -104,8 +101,8 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'auto',
   },
   container: {
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
   },
   paper: {
     padding: theme.spacing(2),
@@ -127,7 +124,7 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -171,16 +168,17 @@ export default function Dashboard() {
         
       </Drawer>
       <main className={classes.content}>
-        <div />
-        <Container maxWidth="sm" className={classes.container}>
-          <Grid container >
+        <div className={classes.appBarSpacer} />
+        <Container maxWidth="lg" className={classes.container}>
+          <Grid container spacing={3}>
+            
             <Grid item xs={12} md={12} lg={12}>
-              <Paper>
-                <AddUser/>
+              <Paper height="100%" >
+                <AddNewUser />
               </Paper>
             </Grid>
             </Grid>
-          <Box pt={10}>
+          <Box pt={4}>
             <Copyright />
           </Box>
         </Container>
