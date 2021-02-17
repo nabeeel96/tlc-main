@@ -3,7 +3,7 @@ import SignIn from './components/SignIn';
 import Signup from './components/Signup';
 import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import NestedList from './components/SubMenu';
+import AddNewUser from './components/AddNewUser';
 
 function App() {
   return (
@@ -13,16 +13,19 @@ function App() {
           <Route exact path='/'>
             <Dashboard />
           </Route>
-          <Route path='/login'>
+          <Route path='/SignIn'>
             <SignIn />
           </Route>
           <Route path='/Signup'>
             <Signup />
           </Route>
-          <Route path='/SubMenu'>
-            <NestedList />
+          <Route path='/AddNewUser'>
+            <AddNewUser />
           </Route>
         </Switch>
+        <Route path='/ok'>
+          <AddNewUser />
+        </Route>
       </div>
     </Router>
   );

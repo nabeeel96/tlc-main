@@ -31,7 +31,7 @@ function Copyright() {
         Your Website
       </Link>{' '}
       {new Date().getFullYear()}
-      {'.'} 
+      {'.'}   
     </Typography>
   );
 }
@@ -166,7 +166,7 @@ export default function Dashboard() {
         </div>
         <Divider />
         <List>{mainListItems}</List>
-        <Divider />
+      
         
       </Drawer>
       <main className={classes.content}>
