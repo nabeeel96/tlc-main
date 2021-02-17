@@ -22,6 +22,7 @@ import { mainListItems } from './listItems';
 // import Chart from './Chart';
 import Deposits from './Deposit';
 import Orders from './Order';
+import AddUser from './AddNewUser';
 
 function Copyright() {
   return (
@@ -103,8 +104,8 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'auto',
   },
   container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   paper: {
     padding: theme.spacing(2),
@@ -126,7 +127,7 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  
 
   return (
     <div className={classes.root}>
@@ -170,17 +171,16 @@ export default function Dashboard() {
         
       </Drawer>
       <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-            {/* Chart */}
+        <div />
+        <Container maxWidth="sm" className={classes.container}>
+          <Grid container >
             <Grid item xs={12} md={12} lg={12}>
-              <Paper className={fixedHeightPaper}>
-                {/* <Chart /> */}
+              <Paper>
+                <AddUser/>
               </Paper>
             </Grid>
             </Grid>
-          <Box pt={4}>
+          <Box pt={10}>
             <Copyright />
           </Box>
         </Container>
