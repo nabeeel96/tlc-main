@@ -3,9 +3,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import GroupAddRoundedIcon from '@material-ui/icons/GroupAddRounded';
+import GroupIcon from '@material-ui/icons/Group';
 import { Link } from 'react-router-dom';
-import List from '@material-ui/core/List'
+import List from '@material-ui/core/List';
+import PersonAddIcon from '@material-ui/icons/PersonAdd'; 
+import StorageIcon from '@material-ui/icons/Storage';
 
 export const mainListItems = (
   <div>
@@ -17,48 +19,40 @@ export const mainListItems = (
       <ListItemText primary="Dashboard" />
     </ListItem>
     </Link>
-    <Link to='/AddNewUser'>
+    <Link to='/User'>
     <ListItem button>
       <ListItemIcon>
-        <DashboardIcon />
+        <GroupIcon />
       </ListItemIcon>
-      <ListItemText primary="Add New User" />
+      <ListItemText primary="Users" />
     </ListItem>
     </Link>
     <Link to='/AddServer'>
     <ListItem button>
       <ListItemIcon>
-        <DashboardIcon />
+        <StorageIcon />
       </ListItemIcon>
-      <ListItemText primary="Add New Server" />
+      <ListItemText primary="Add Server" />
     </ListItem>
     </Link>
-    <Link to='/SignIn'>
+    <Link to='/AddNewUser'>
     <ListItem button>
       <ListItemIcon>
-        <DashboardIcon />
+        <PersonAddIcon />
       </ListItemIcon>
-      <ListItemText primary="Sign in" />
+      <ListItemText primary="Add New User" />
     </ListItem>
     </Link>
-    <Link to='/Signup'>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Sign up" />
-    </ListItem>
-    </Link>
-   
-    <List>
-      <ListItem>
-        <ListItemText primary='Option'></ListItemText>
-      </ListItem>  
-      <ListItem>Option</ListItem>  
-      <ListItem>Option</ListItem>  
-    </List>    
     
+    <Link to='/EditUser'>
+    <ListItem button>
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="EditUser" />
+    </ListItem>
+    </Link>
+     
     
     </div>
 );
-
